@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Maryland banned 287(g). Local law enforcers still can help if they want to | Capital News Service</title>
+  <meta name="description"
+    content="A Capital News Service analysis of ICE records: what Maryland&#x27;s 287(g) ban changed, and the ways local jails can still help ICE.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/page.css">
+  <link rel="stylesheet" href="css/charts.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/scrollama@3.2.0/build/scrollama.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <!-- The page:
+     css/page.css     overall page design (type, columns, title screen, scrollytelling)
+     css/charts.css   CNS chart frames, legends, buttons, tooltips
+     js/main.js       loads data/*.csv and draws each chart from js/charts/*.js -->
+
+  <header class="masthead">
+    <a href="https://cnsmaryland.org/">
+      <img src="assets/cns-logo.png" alt="Capital News Service">
+    </a>
+  </header>
+  <div class="progress" aria-hidden="true"></div>
+
+  <section class="title bleed dark" aria-label="Story title">
+    <svg id="herolines" aria-hidden="true"></svg>
+    <div class="panel">
+      <p class="kicker">Immigration enforcement</p>
+      <h1>Maryland banned 287(g). Local law enforcers still can help if they want to.</h1>
+      <p class="dek">The agreements Maryland outlawed in February accounted for about 4% of ICE's arrests in the state. Jails kept honoring the agency's requests after the ban, records show, and whether they helped depended largely on the county.</p>
+      <p class="byline">By <a href="https://cnsmaryland.org/author/mhm/"><b>Mehedi Marof</b></a> · Capital News Service</p>
+      <p class="series">Also in this series: <a href="https://mehedimarof.github.io/ices-arrests-in-maryland-nearly-doubled-this-year-the-growth-is-people-with-no-criminal-record/">Who ICE arrested</a> · <a href="https://mehedimarof.github.io/after-an-ice-arrest-in-maryland-most-people-were-held-out-of-state-many-were-moved-again-and-again/">After the arrest</a></p>
+    </div>
+    <a class="cue" href="#story">Scroll to read<span aria-hidden="true">↓</span></a>
+  </section>
+
+  <main id="story">
+<div class="col" style="padding-top:56px"></div>
+<div class="col">
+<p>Eight days after Maryland banned 287(g) agreements, a captain at the Harford County jail who had worked in the "former 287(g) program" emailed U.S. Immigration and Customs Enforcement a list of foreign-born inmates. ICE would now "most likely receive this report without the extras," she wrote.</p>
+<p>Three weeks later, the sheriff's office alerted ICE that "Harford County has a foreign-born arrestee inbound" and asked agents to lodge a request to hold him "within an hour if possible." The man, the email said, would likely be released because of "his minimal criminal history."</p>
+<p>None of that required a 287(g) agreement. The ban, which Gov. Wes Moore <a href="https://cnsmaryland.org/2026/02/17/maryland-bans-partnerships-between-local-law-enforcement-and-ice/">signed on Feb. 17</a>, ended the program that let ICE deputize local officers. It left in place the other ways a jail can help the agency when it chooses to: honoring ICE's requests to hold people, sharing booking information and picking up the phone.</p>
+<p>The ban closed one route. In the 13 months before it, ICE coded 240 of its nearly 6,000 arrests in Maryland as made through 287(g) agreements, about 4%, a Capital News Service analysis of ICE records found.</p>
+<p>Since the ban, ICE has recorded at least 385 custodial arrests in Maryland, in which a jail, prison or other law enforcement agency handed someone to the agency, about 69 a month, compared with about 77 before.</p>
+<p>ICE also kept sending county jails more than 100 requests a month to hold people.</p>
+</div>
+<figure class="chart-frame wide" id="f-287g"> <h3 class="chart-hed">287(g)-coded arrests fell sharply after the ban. Detainer requests continued</h3> <p class="chart-chatter">Monthly, January 2024 to July 2026. Top: arrests ICE coded as made through 287(g) agreements, by county. Bottom: detainers, ICE's requests that a jail or prison hold someone or notify the agency before releasing them. A detainer is a request, not an arrest; it becomes an arrest only if ICE takes the person into custody.</p> <div class="two-up stacked"> <div> <h4>287(g) arrests</h4> <div class="legend"><span><i style="background:var(--orange)"></i>Frederick</span><span><i style="background:var(--blue)"></i>Harford</span><span><i style="background:var(--teal)"></i>Cecil</span><span><i style="background:var(--gray)"></i>Elsewhere or unknown</span></div> <div class="viz" id="c-287g"></div> </div> <div> <h4>Detainers: requests to hold or notify</h4> <div class="legend"><span><i class="line" style="background:var(--blue)"></i>County jails</span><span><i class="line" style="background:var(--purple)"></i>State prisons and state-run jails</span><span><i class="line" style="background:var(--gray)"></i>Police, courts and federal</span></div> <div class="viz" id="c-det"></div> </div> </div> <p class="chart-note">Five other counties had narrower "warrant service" agreements (Allegany, Carroll, Garrett, St. Mary's and Washington), but almost none of ICE's arrests there are coded 287(g). Facility types were classified by CNS from ICE's facility names.</p> <div class="chart-foot"><span class="chart-source">Source: ICE data obtained by the Deportation Data Project via FOIA; CNS analysis. <b>Chart: Mehedi Marof / Capital News Service</b> · <a href="data/g287.csv">287(g) data</a> · <a href="data/detainers.csv">Detainer data</a></span><span class="wordmark">Capital News Service</span></div> </figure>
+<div class="col">
+<p>"There are tons of ways that they can participate without 287(g)," said Maureen Sweeney, who directs the Immigration Clinic at the University of Maryland Francis King Carey School of Law. "If a local officer feels inspired to call ICE, they can call ICE. That's not 287(g). That doesn't necessarily go against that law."</p>
+<p>CNS analyzed ICE arrest, detainer and detention records obtained by the <a href="https://deportationdata.org/data/processed/ice.html">Deportation Data Project</a>, a research group at the University of California, Berkeley, and UCLA. The records run through Aug. 6, 2026.</p>
+<h2>It depends on the county</h2>
+<p>ICE's main tool in jails is a detainer, a written request that a jail hold someone for up to 48 hours past their scheduled release, or notify the agency before letting them go, so agents can pick them up. Jails are not required to comply. "The local jurisdiction doesn't have to honor the detainer," Sweeney said, "but many local jurisdictions do."</p>
+<p>In Maryland, whether a jail honors one depends largely on where it is. Since Jan. 20, 2025, ICE took custody of 141 people on detainers at the Frederick County jail, which declined two, ICE's records show. At Harford's jail, ICE took custody of 89, and the jail declined one.</p>
+<p>In Prince George's County, the jail declined 72 detainers and ICE took custody in 50 cases. In Howard County, the jail declined 17 and ICE took custody in four. Many detainers in both counties have no recorded outcome yet.</p>
+</div>
+<figure class="chart-frame wide" id="f-det-outcomes">
+<h3 class="chart-hed">In some counties, ICE almost always got the person it asked for. In others, jails often said no.</h3>
+<p class="chart-chatter">Detainers ICE sent to seven Maryland county jails since Jan. 20, 2025, by what happened to them. Totals at right</p>
+<div class="legend"><span><i style="background:#333"></i>ICE took custody</span><span><i style="background:var(--red)"></i>Jail declined</span><span><i style="background:var(--lightgray,#d6d6d6)"></i>Other or not yet recorded</span></div>
+<div class="viz" id="c-det-outcomes"></div>
+<p class="chart-note">"Other or not yet recorded" includes detainers ICE lifted for other reasons and those with no outcome in the records yet. Duplicate and replacement detainers are left out.</p>
+<div class="chart-foot"><span class="chart-source">Source: ICE detainer data obtained by the Deportation Data Project via FOIA; CNS analysis. <b>Chart: Mehedi Marof / Capital News Service</b> · <a href="data/detainer_outcomes.csv">Get the data</a></span><span class="wordmark">Capital News Service</span></div>
+</figure>
+<div class="col">
+<p>Statewide, about 62% of detainers with a recorded outcome ended with ICE taking the person into custody, and about 13% were declined. Half have no recorded outcome, so those shares could change.</p>
+<p>ICE sent the Harford jail at least 14 detainers from Feb. 17 through July, including after Maryland passed a second law limiting cooperation in May. In the first eight weeks after the ban, eight people in the jail had ICE detainers and four were handed to ICE, each within the 48-hour window, according to the county's records. The jail sent its notices to two ICE field office email groups, and agents replied with pickup times.</p>
+<p>Some cooperation needs no request at all.</p>
+<p>When someone is booked into a local jail, their information goes into national databases that ICE can search, Sweeney said. "It's part of a larger law enforcement data surveillance infrastructure that exists, and ICE is 100% tapped into that," she said.</p>
+<p>"There's also just communication back and forth," she said. "There are a variety of formal and informal systems that set up that communication."</p>
+<p>Federal law has widened the pipeline. Under the Laken Riley Act, which Trump signed in January 2025, being charged with or arrested for certain crimes, such as theft or burglary, can require ICE to detain a noncitizen, even without a conviction.</p>
+<p>Yulie Landan, a staff attorney at the National Immigration Project, said the pipeline from the criminal legal system to immigration detention "is very well established and problematic in its own right."</p>
+<p>Before February, eight Maryland counties had <a href="https://mgaleg.maryland.gov/2026RS/fnotes/bil_0005/sb0245.pdf">287(g) agreements</a> with ICE. Three of them, Frederick, Harford and Cecil, had "jail enforcement" agreements that trained jail officers to check inmates' immigration status, and nearly all of the 478 arrests ICE has coded as 287(g) since October 2022 came from those three counties.</p>
+<p>The sheriffs who ran the programs defended them.</p>
+<p>Frederick County Sheriff Chuck Jenkins credited his office's 17-year partnership with ICE with keeping violent crime low, and Harford County Sheriff Jeff Gahler called it a public safety measure. "My responsibility is the borders of Harford County," Gahler told CNS last year.</p>
+<p>Republicans in the General Assembly argued the same. "Cooperation between local and federal law enforcement produces greater public safety for everyone," said Sen. Justin Ready, R-Carroll.</p>
+<p>"In Maryland, we defend constitutional rights and we defend constitutional policing," Moore said when he signed the ban.</p>
+<h2>A law on paper, officers on the ground</h2>
+<p>In May, Maryland tried to narrow the remaining routes. The Community Trust Act limits when correctional officers may contact ICE about someone in custody, generally to people convicted of felonies, registered sex offenders and a few other groups.</p>
+<p>Moore let it become law without his signature, saying it "creates ambiguities around joint investigations."</p>
+<p>Sweeney said a state law may not change what happens inside every jail.</p>
+<p>"There are a lot of law enforcement agents who see immigration enforcement as part of law enforcement, and so they are very happy to, even anxious to, collaborate with ICE," she said. "You have the General Assembly passing the Trust Act, but that doesn't necessarily reflect the will of the officers who are on the ground."</p>
+<p>Seventeen of the state's 24 sheriffs sued in federal court in May to block the law. The U.S. Justice Department <a href="https://www.justice.gov/opa/pr/justice-department-sues-maryland-over-sanctuary-policies">sued Maryland</a> in July over the law and the state's other limits on cooperation, saying some facilities had refused to hand people over even when presented with a routine detainer.</p>
+<p>"Federal immigration officers merely enforce the laws that our Nation's elected representatives in Congress passed," Associate Attorney General Stanley Woodward said.</p>
+<p>ICE's records end in early August, too soon to show whether the Community Trust Act has changed how often jails hand people to the agency.</p>
+<h2>Beyond the jails</h2>
+<p>ICE has also been finding far more people without any help from jails. Non-custodial arrests, made at homes, workplaces, roadsides and ICE's own offices, more than doubled from January through July, to about 3,700 from about 1,600 a year earlier.</p>
+<p>Custodial arrests fell from 626 to 515.</p>
+</div>
+<figure class="chart-frame wide" id="f-custody">
+<h3 class="chart-hed">Non-custodial arrests surged as custodial arrests dipped</h3>
+<p class="chart-chatter">ICE arrests in Maryland per month, January 2024–July 2026</p>
+<div class="legend"><span><i class="line" style="background:var(--orange)"></i>Non-custodial: homes, workplaces,
+          roadsides, ICE offices</span><span><i class="line" style="background:var(--purple)"></i>Custodial: transfers from jails, prisons and 287(g)</span></div>
+<div class="viz" id="c-custody"></div>
+<p class="chart-note">Custodial arrests are counted as those ICE coded as custodial arrests, including the Criminal Alien Program, plus 287(g) arrests. August 2026 is excluded because the month is incomplete.</p>
+<div class="chart-foot"><span class="chart-source">Source: ICE data obtained by the Deportation Data Project via
+          FOIA; CNS analysis. <b>Chart: Mehedi Marof / Capital News Service</b> · <a href="data/custody.csv">Get the
+            data</a></span><span class="wordmark">Capital News Service</span></div>
+</figure>
+<div class="col">
+<p>Jenkins <a href="https://cnsmaryland.org/2025/12/19/ban-on-immigration-partnership-would-make-maryland-a-target-for-ice-street-arrests-frederick-county-sheriff-says/">warned in December 2025</a> that a ban would push ICE onto the streets. "I think it would be a lot better for the immigrant communities not to have to endure this," he told Capital News Service. But the rise began in 2025, well before the ban, so the records cannot show that the ban caused it.</p>
+<p>Nationally, ICE's custodial and non-custodial arrests each rose about 75%. In Maryland, custodial arrests fell about 18%. The records do not explain the difference.</p>
+<p>People in non-custodial arrests were far more likely to have no criminal record. Since Jan. 20, 2025, about 69% of ICE's non-custodial arrests in Maryland, not counting those at its offices, were of people with no record, compared with about 27% of custodial arrests.</p>
+<p>In September, the National Immigration Project, the Amica Center for Immigrant Rights, the ACLU of Maryland and CASA <a href="https://nipnlg.org/index.php/news/press-releases/immigrant-rights-groups-sue-dhs-halt-illegal-warrantless-ice-arrests-maryland">filed a class action</a>, Guzmán v. DHS, arguing that ICE has made arrests across Maryland since January 2025 without warrants or probable cause.</p>
+<p>"In Maryland, it really looks like racial profiling," Landan said. She said agents follow cars driven by people who appear brown or Black, or registered to people with foreign-sounding names, then surround the cars and arrest people "often without asking them any questions whatsoever."</p>
+<p class="readnext"><a href="https://mehedimarof.github.io/ices-arrests-in-maryland-nearly-doubled-this-year-the-growth-is-people-with-no-criminal-record/"><span>Read next</span>ICE's arrests in Maryland nearly doubled this year. The growth is people with no criminal record</a></p>
+</div>
+<div class="col">
+      <section class="limits-text">
+        <h2>What the records can't tell us</h2>
+        <p>The records show how an arrest happened, not why. They show detainers and their recorded outcomes, but half of the detainers have no outcome yet, and the records cannot show informal contacts between local officers and ICE. Only arrests ICE itself coded as 287(g) are counted as such. Facility types were classified by CNS from ICE's facility names. ICE keeps updating its records, so counts for the most recent months may grow.</p>
+      </section>
+      <section class="methods">
+        <h2>How we did this analysis</h2>
+        <h3>The records</h3>
+<p>This analysis uses U.S. Immigration and Customs Enforcement records that the Deportation Data Project, a
+          research group at the University of California, Berkeley, and UCLA, obtained through <a href="https://deportationdata.org/foia.html">Freedom of Information Act lawsuits</a> and published on its <a href="https://deportationdata.org/data/processed/ice.html">data page</a>. We used the project's release of
+          Aug. 24, 2026, which covers Oct. 1, 2022, through Aug. 6, 2026, and four of its files: arrests, detainers,
+          arrests linked to detention stays, and detention stints. In every file, we removed rows the project flags as
+          likely duplicates, using its <code>duplicate_drop_row</code> column.</p>
+        <h3>Arrests</h3>
+<p>In the arrests file, each row is one ICE arrest. We counted an arrest as a Maryland arrest when the project's
+          <code>apprehension_state_filled_in</code> column says Maryland. That column uses the state ICE recorded and,
+          when ICE left it blank, fills it in from the arrest location; it identifies 12,859 Maryland rows, 214 more
+          than ICE's own state field. After removing 218 likely duplicates, 12,641 arrests remained. Some people were
+          arrested more than once, and 28 rows have no person identifier (<code>unique_identifier</code>), so the story
+          counts arrests rather than people.
+        </p>
+<p>Criminal history comes from <code>apprehension_criminality</code>, which records what ICE's systems showed at
+          the time of arrest: "Convicted Criminal," "Pending Criminal Charges" or "Other Immigration Violator." The
+          story calls the last group people with no prior conviction or pending charge. Whether a person already had a
+          final order of removal comes from <code>final_order_before_apprehension</code>.</p>
+<p>How an arrest happened comes from <code>apprehension_method_simple</code>. We treated "Custodial Arrest,"
+          which includes ICE's Criminal Alien Program, and "287(g) Program" as custodial arrests, meaning a jail or
+          prison handed the person to ICE. All other arrests, mostly those ICE codes "At-Large Arrest," are
+          non-custodial. Arrests at ICE's two Baltimore offices were identified from <code>event_landmark</code>, where
+          ICE lists them as "NON DETAINED ENCOUNTERS AT BAL ERO" and "BALTIMORE ISAP OFFICE."</p>
+<p>The story uses two time periods. Year-over-year comparisons use Jan. 1 through July 31 of each year, because
+          the records end Aug. 6. Everything else covers Jan. 20, 2025, when President Donald Trump's second term began,
+          through Aug. 6, 2026, unless the text says otherwise. Comparisons around Maryland's 287(g) ban are
+          monthly averages over periods of different lengths, Jan. 20, 2025, through Feb. 16, 2026 (393 days), and Feb.
+          17 through Aug. 6, 2026 (171 days): each count was divided by the number of days and multiplied by 30.4375,
+          the average length of a month. National figures come from the same file, using all states. The state
+          comparison includes the 43 states and territories with at least 1,000 arrests since Jan. 20, 2025, and leaves
+          out the District of Columbia.</p>
+        <h3>Detainers</h3>
+<p>In the detainers file, each row is one detainer: a request from ICE that a jail or prison hold a person or
+          notify the agency before releasing them. We kept detainers sent to facilities in Maryland
+          (<code>facility_state</code>) and dated them by <code>detainer_prepare_date</code>. ICE does not say what kind
+          of facility each one is, so CNS sorted the names in <code>detention_facility</code> into county jails, state
+          prisons and state-run jails, federal custody, police or courts, and ICE offices, using keywords in the names.
+          How a detainer ended comes from <code>detainer_lift_reason</code>; "Booked into Detention" means ICE took the
+          person into custody. Detainers closed as duplicates or replaced by a new form were left out of those outcome
+          shares.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <img src="assets/cns-logo.png" alt="Capital News Service">
+    <span>Capital News Service · Philip Merrill College of Journalism, University of Maryland</span>
+  </footer>
+</body>
+
+</html>
