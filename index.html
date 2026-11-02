@@ -193,101 +193,38 @@
       <p>ICE's records end in early August, too soon to show whether the Community Trust Act has changed how often local
         law enforcement
         hand people to the agency.</p>
-      <h2>Beyond the jails</h2>
-      <p>ICE has also been detaining far more people on streets and communities. Non-custodial arrests, made at homes,
-        workplaces, roadsides and ICE's own offices, more than doubled from January through July, to about 3,700 from
-        about 1,600 a year earlier.</p>
-      <p>Custodial arrests fell from 626 to 515.</p>
-    </div>
-    <figure class="chart-frame wide" id="f-custody">
-      <h3 class="chart-hed">Non-custodial arrests surged as custodial arrests dipped</h3>
-      <p class="chart-chatter">ICE arrests in Maryland per month, January 2024–July 2026</p>
-      <div class="legend"><span><i class="line" style="background:var(--orange)"></i>Non-custodial: homes, workplaces,
-          roadsides, ICE offices</span><span><i class="line" style="background:var(--purple)"></i>Custodial: transfers
-          from jails, prisons and 287(g)</span></div>
-      <div class="viz" id="c-custody"></div>
-      <p class="chart-note">Custodial arrests are counted as those ICE coded as custodial arrests, including the
-        Criminal Alien Program, plus 287(g) arrests. August 2026 is excluded because the month is incomplete.</p>
-      <div class="chart-foot"><span class="chart-source">Source: ICE data obtained by the Deportation Data Project via
-          FOIA; CNS analysis. <b>Chart: Mehedi Marof / Capital News Service</b> · <a href="data/custody.csv">Get the
-            data</a></span><span class="wordmark">Capital News Service</span></div>
-    </figure>
-    <div class="col">
-      <p>Jenkins <a
-          href="https://cnsmaryland.org/2025/12/19/ban-on-immigration-partnership-would-make-maryland-a-target-for-ice-street-arrests-frederick-county-sheriff-says/">warned
-          in December 2025</a> that a 287(g) ban would push ICE onto the streets. "I think it would be a lot better for
-        the
-        immigrant communities not to have to endure this," he told Capital News Service. But the rise began in 2025,
-        well before the ban, so the records cannot show that the ban caused it.</p>
-      <p>Nationally, ICE's custodial and non-custodial arrests each rose about 75%. In Maryland, custodial arrests fell
-        about 18%. The records do not explain the difference.</p>
-      <p>People in non-custodial arrests were far more likely to have no criminal record. Since Jan. 20, 2025, about 69%
-        of ICE's non-custodial arrests in Maryland, not counting those at its offices, were of people with no record,
-        compared with about 27% of custodial arrests.</p>
-      <p>In September, the National Immigration Project, the Amica Center for Immigrant Rights, the ACLU of Maryland and
-        CASA <a
-          href="https://nipnlg.org/index.php/news/press-releases/immigrant-rights-groups-sue-dhs-halt-illegal-warrantless-ice-arrests-maryland">filed
-          a class action</a>, Guzmán v. DHS, arguing that ICE has made arrests across Maryland since January 2025
-        without warrants or probable cause.</p>
-      <p>"In Maryland, it really looks like racial profiling," Landan said. She said agents follow cars driven by people
-        who appear brown or Black, or registered to people with foreign-sounding names, then surround the cars and
-        arrest people "often without asking them any questions whatsoever."</p>
       <p class="readnext"><a href="https://mehedi-marof.github.io/ICE-arrests-in-maryland-nearly-doubled/"><span>Read
             next</span>ICE's arrests in Maryland nearly doubled this year. The growth is people with no criminal
           record</a></p>
     </div>
     <div class="col">
-      <section class="limits-text">
-        <h2>What the records can't tell us</h2>
-        <p>The records show how an arrest happened, not why. They show detainers and their recorded outcomes, but half
-          of the detainers have no outcome yet, and the records cannot show informal contacts between local officers and
-          ICE. Only arrests ICE itself coded as 287(g) are counted as such. Facility types were classified by CNS from
-          ICE's facility names. ICE keeps updating its records, so counts for the most recent months may grow.</p>
-      </section>
       <section class="methods">
         <h2>How we did this analysis</h2>
-        <h3>The records</h3>
-        <p>This analysis uses U.S. Immigration and Customs Enforcement records that the Deportation Data Project, a
-          research group at the University of California, Berkeley, and UCLA, obtained through <a
-            href="https://deportationdata.org/foia.html">Freedom of Information Act lawsuits</a> and published on its <a
-            href="https://deportationdata.org/data/processed/ice.html">data page</a>. We used the project's release of
-          Aug. 24, 2026, which covers Oct. 1, 2022, through Aug. 6, 2026, and four of its files: arrests, detainers,
-          arrests linked to detention stays, and detention stints. In every file, we removed rows the project flags as
-          likely duplicates, using its <code>duplicate_drop_row</code> column.</p>
-        <h3>Arrests</h3>
-        <p>In the arrests file, each row is one ICE arrest. We counted an arrest as a Maryland arrest when the project's
-          <code>apprehension_state_filled_in</code> column says Maryland. That column uses the state ICE recorded and,
-          when ICE left it blank, fills it in from the arrest location; it identifies 12,859 Maryland rows, 214 more
-          than ICE's own state field. After removing 218 likely duplicates, 12,641 arrests remained. Some people were
-          arrested more than once, and 28 rows have no person identifier (<code>unique_identifier</code>), so the story
-          counts arrests rather than people.
+        <p>Capital News Service analyzed U.S. Immigration and Customs Enforcement arrest and detainer records that the
+          <a href="https://deportationdata.org/data/processed/ice.html">Deportation Data Project</a>, a research group
+          at
+          the University of California, Berkeley, and UCLA, obtained through <a
+            href="https://deportationdata.org/foia.html">Freedom of Information Act lawsuits</a>. The records cover
+          Oct. 1, 2022, through Aug. 6, 2026. We removed rows the project flags as likely duplicates.
         </p>
-        <p>Criminal history comes from <code>apprehension_criminality</code>, which records what ICE's systems showed at
-          the time of arrest: "Convicted Criminal," "Pending Criminal Charges" or "Other Immigration Violator." The
-          story calls the last group people with no prior conviction or pending charge. Whether a person already had a
-          final order of removal comes from <code>final_order_before_apprehension</code>.</p>
-        <p>How an arrest happened comes from <code>apprehension_method_simple</code>. We treated "Custodial Arrest,"
-          which includes ICE's Criminal Alien Program, and "287(g) Program" as custodial arrests, meaning a jail or
-          prison handed the person to ICE. All other arrests, mostly those ICE codes "At-Large Arrest," are
-          non-custodial. Arrests at ICE's two Baltimore offices were identified from <code>event_landmark</code>, where
-          ICE lists them as "NON DETAINED ENCOUNTERS AT BAL ERO" and "BALTIMORE ISAP OFFICE."</p>
-        <p>The story uses two time periods. Year-over-year comparisons use Jan. 1 through July 31 of each year, because
-          the records end Aug. 6. Everything else covers Jan. 20, 2025, when President Donald Trump's second term began,
-          through Aug. 6, 2026, unless the text says otherwise. Comparisons around Maryland's 287(g) ban are
-          monthly averages over periods of different lengths, Jan. 20, 2025, through Feb. 16, 2026 (393 days), and Feb.
-          17 through Aug. 6, 2026 (171 days): each count was divided by the number of days and multiplied by 30.4375,
-          the average length of a month. National figures come from the same file, using all states. The state
-          comparison includes the 43 states and territories with at least 1,000 arrests since Jan. 20, 2025, and leaves
-          out the District of Columbia.</p>
-        <h3>Detainers</h3>
-        <p>In the detainers file, each row is one detainer: a request from ICE that a jail or prison hold a person or
-          notify the agency before releasing them. We kept detainers sent to facilities in Maryland
-          (<code>facility_state</code>) and dated them by <code>detainer_prepare_date</code>. ICE does not say what kind
-          of facility each one is, so CNS sorted the names in <code>detention_facility</code> into county jails, state
-          prisons and state-run jails, federal custody, police or courts, and ICE offices, using keywords in the names.
-          How a detainer ended comes from <code>detainer_lift_reason</code>; "Booked into Detention" means ICE took the
-          person into custody. Detainers closed as duplicates or replaced by a new form were left out of those outcome
-          shares.</p>
+        <p>We counted an arrest as a 287(g) arrest only if ICE coded it that way. Custodial arrests are those in which
+          a
+          jail, prison or other law enforcement agency handed someone to ICE. Because the periods before and after
+          Maryland's Feb. 17, 2026, ban are different lengths, about 13 months and five and a half months, we compared
+          them as monthly averages.</p>
+        <p>A detainer is ICE's request that a jail or prison hold someone or notify the agency before releasing them.
+          We
+          used detainers sent to Maryland facilities since Jan. 20, 2025. ICE does not label facility types, so CNS
+          sorted
+          facilities into county jails, state prisons and others by their names. Outcomes are as ICE recorded them;
+          detainers closed as duplicates or replaced by a new form were left out.</p>
+        <h3>What the records can't tell us</h3>
+        <p>The records show how an arrest happened, not why. About half of the detainers have no recorded outcome yet,
+          so
+          those shares could change, and the records cannot show informal contacts between local officers and ICE. ICE
+          keeps updating its records, so counts for recent months may grow.</p>
+        <p>The full methodology, analysis notebook and data are on <a
+            href="https://github.com/mehedi-marof/ice-maryland-analysis-aug26">GitHub</a>.</p>
       </section>
     </div>
   </main>
